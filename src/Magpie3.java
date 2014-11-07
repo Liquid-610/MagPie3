@@ -30,31 +30,24 @@ public class Magpie3
 	public String getResponse(String statement)
 	{
 
-
+        String response = "";
         if(findKeyword(statement,"cat") >= 0 || findKeyword(statement, "dog") >= 0)
         {
             response = "Tell me more about your pets";
         }
-        if(findKeyword(statement, "tanczos") >= 0)
+        else if(findKeyword(statement, "tanczos") >= 0)
         {
             response = "He sounds like a good teacher";
         }
-        if(findKeyword(statement, "games") >= 0)
+        else if(findKeyword(statement, "games") >= 0)
         {
             response = "My favorite game is call of duty";
         }
-        if(findKeyword(statement, "sports") >= 0 )
+        else if(findKeyword(statement, "sports") >= 0 )
         {
             response = "Tell me more about your pets";
         }
-        else
-        {
-            response = getRandomResponse();
-        }
-        return response;
-
-		String response = "";
-		if (statement.length() == 0)
+        else if (statement.length() == 0)
 		{
 			response = "Say something, please.";
 		}
